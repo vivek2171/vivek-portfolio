@@ -348,29 +348,58 @@ h1 span {
     color: #cccccc;
 }
 
-/* --- Responsive Design --- */
+/* ------------------------------------------------ */
+/* --- Responsive Design (Mobile Fixes for both platforms) --- */
+/* ------------------------------------------------ */
 @media (max-width: 992px) {
+    /* Hero Section: Text आणि Image एकाखाली एक येतील */
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 40px;
         padding-top: 20px;
     }
+    /* Image: फोटो मजकुराच्या वरती (order: -1) आणि योग्य आकारात दिसेल */
     .image-content {
         order: -1; 
-        width: 100%;
-        max-width: 400px; 
+        width: 80%; /* मोबाईलवर फोटोची रुंदी 80% */
+        max-width: 350px; 
     }
+    /* Text: पूर्ण रुंदी घेईल */
     .text-content {
         width: 100%;
     }
+    
+    /* Typography: Hero Title आणि Role चा आकार लहान करेल */
     h1 {
         font-size: 2.5rem;
     }
     .role {
         font-size: 1.5rem;
+        margin-bottom: 15px; /* Role नंतर थोडी कमी जागा */
     }
+    .section-title {
+        font-size: 2rem; /* Section Title लहान करा */
+    }
+    
+    /* Navbar: मोठ्या लिंक्स लपवणे (जागा वाचवण्यासाठी) */
     .nav-links {
         display: none; 
+    }
+
+    /* CTA Buttons: बटणे एकाखाली एक दिसतील */
+    .cta-buttons {
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .btn {
+        width: 100%;
+        padding: 12px 0; /* रुंदी 100% असल्याने Padding ॲडजस्ट करा */
+    }
+
+    /* Social Links: Hero section मधील लिंक्स सेंटरमध्ये दिसतील */
+    .hero-social-links {
+        justify-content: center;
+        display: flex;
     }
 }
