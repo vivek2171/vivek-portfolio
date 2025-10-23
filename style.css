@@ -25,7 +25,7 @@ body {
     background-color: var(--light-bg);
     color: var(--text-dark);
     line-height: 1.7;
-    overflow-x: hidden; /* मोबाईलवर Horizontal Scrollbar येणार नाही - वाकडं दिसण्याचं मूळ कारण */
+    overflow-x: hidden; /* हे महत्वाचे आहे - वाकडं दिसणं बंद करेल */
 }
 
 a {
@@ -349,11 +349,11 @@ h1 span {
 }
 
 /* ------------------------------------------------ */
-/* --- Responsive Design (Mobile Fix - वाकडं-तिकडं दिसणं बंद होईल) --- */
+/* --- Responsive Design (Mobile Fix - लेआउट बिघडणार नाही) --- */
 /* ------------------------------------------------ */
 @media (max-width: 992px) {
     .container {
-        padding: 0 15px; /* मोबाईलवर किनारींची जागा (padding) कमी करा */
+        padding: 0 15px; 
     }
     .navbar {
         padding: 15px 5%;
@@ -369,7 +369,7 @@ h1 span {
     /* Image: फोटो मजकुराच्या वरती (order: -1) आणि योग्य आकारात दिसेल */
     .image-content {
         order: -1; 
-        width: 80%; /* मोबाईलवर फोटोची रुंदी 80% */
+        width: 80%; 
         max-width: 350px; 
     }
     /* Text: पूर्ण रुंदी घेईल आणि सेंटरमध्ये येईल */
@@ -399,7 +399,7 @@ h1 span {
         padding: 60px 5%; 
     }
 
-    /* Navbar: मोठ्या लिंक्स लपवणे (जागा वाचवण्यासाठी) */
+    /* Navbar: मोठ्या लिंक्स लपवणे */
     .nav-links {
         display: none; 
     }
@@ -411,7 +411,7 @@ h1 span {
         align-items: center;
     }
     .btn {
-        width: 80%; /* बटणांना योग्य रुंदी */
+        width: 80%; 
         max-width: 300px;
         padding: 12px 0; 
     }
