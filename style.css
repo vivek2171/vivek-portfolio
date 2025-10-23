@@ -1,0 +1,376 @@
+/* मराठी कमेंट: Clean & Professional Theme CSS: White/Light Gray & Warm Orange Accent */
+
+/* --- Variables (रंग) --- */
+:root {
+    --primary-color: #ff8c00; /* Warm Orange/Accent */
+    --accent-color: #e67e22; /* Darker Orange for interaction */
+    --light-bg: #f5f7fa; /* Light Gray Background */
+    --card-bg: #ffffff; /* Pure White Card Background */
+    --text-dark: #2c3e50; /* Dark Blue/Gray Text */
+    --text-muted: #7f8c8d; /* Muted Text */
+    --shadow-subtle: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-lift: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease-in-out;
+}
+
+/* --- Reset and Base Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Typography and Titles --- */
+h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+h1 span {
+    color: var(--primary-color);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    margin-left: 35px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-contact-btn {
+    padding: 8px 18px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    color: var(--card-bg) !important;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+}
+.nav-contact-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.4);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding-top: 120px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    padding-bottom: 50px;
+}
+
+/* फोटो इम्प्रूव्हमेंट - Simple & Clean Look */
+.image-content {
+    width: 45%;
+    max-width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    border: 5px solid var(--light-bg); /* Photo Border */
+    transition: var(--transition);
+}
+
+.profile-image-natural {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.image-content:hover {
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-lift);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.welcome {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.role {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin: 15px 0 25px;
+    font-weight: 700;
+}
+
+.typing-effect {
+    color: var(--primary-color);
+}
+
+.description {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    max-width: 550px;
+    margin-bottom: 40px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 14px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--card-bg);
+}
+
+.primary-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 10px rgba(255, 140, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--text-muted); /* Subtle Border */
+}
+
+.secondary-btn:hover {
+    background: var(--primary-color);
+    color: var(--card-bg);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.hero-social-links a {
+    font-size: 1.8rem;
+    margin-right: 25px;
+    color: var(--text-muted);
+}
+
+.hero-social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Main Sections --- */
+.section-padding {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #eeeeee;
+}
+#skills, #projects {
+    background-color: var(--light-bg); 
+    border-top: 1px solid #e0e0e0;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
+
+/* Skill Item Card Hover Effect */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
+    margin-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skill-item {
+    background-color: var(--card-bg); 
+    border-radius: 8px;
+    padding: 20px 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    border-left: 5px solid var(--primary-color); 
+    text-align: left;
+    box-shadow: var(--shadow-subtle);
+}
+.skill-item i {
+    color: var(--primary-color);
+}
+.skill-item:hover {
+    background-color: #fffaf5; /* Light orange tint on hover */
+    border-left-color: var(--accent-color);
+    transform: translateY(-4px); 
+    box-shadow: var(--shadow-lift);
+}
+
+/* Project Card Hover Effect */
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: left;
+    transition: var(--transition);
+    box-shadow: var(--shadow-subtle);
+    border-top: 4px solid var(--primary-color);
+}
+.project-card:hover {
+    transform: translateY(-5px); 
+    border-top-color: var(--accent-color);
+    box-shadow: var(--shadow-lift);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--text-dark); /* Dark Footer for contrast */
+    color: var(--card-bg);
+    border-top: 1px solid #334455;
+}
+.footer .section-title {
+    color: var(--card-bg);
+}
+.footer .section-title::after {
+    background: var(--primary-color);
+}
+
+.contact-details {
+    color: #cccccc;
+}
+
+.contact-details-link a {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin: 0 18px;
+    color: #cccccc;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+}
+
+.copy {
+    color: #cccccc;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 20px;
+    }
+    .image-content {
+        order: -1; 
+        width: 100%;
+        max-width: 400px; 
+    }
+    .text-content {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .role {
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        display: none; 
+    }
+}
